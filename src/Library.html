@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMAP DIGITAL LIBRARY</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="CSS/LibraryPage.css"> 
+ <script src="JS/LibraryPage.js"></script>
+
+</head> 
+<body onload="checkCookie()">
+    <!-- header -->
+	<nav class="navbar navbar-default navbar-expand-lg navbar-light navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" target="_blank">SMAP<b>DIGITAL Library</b></a>  		
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#" target="_blank" class="home active"><i class="fa fa-home" aria-hidden="true"></i>Home</i></a></li>
+                
+                <li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" class="Library active" href="#"> <i class="fa fa-list" aria-hidden="true">Library Resources</i><b class="caret"></b></a>
+                    <ul class="dropdown-menu">					
+                        <li><a href="Books.html" target="_blank"><i class="fa fa-book" aria-hidden="true">Books</i></a></li>
+                        <li><a href="Megazine.html" target="_blank"><i class="fa fa-medium" aria-hidden="true">Megazine</i></a></li>
+                        <li><a href="Newspaper.html" target="_blank"> <i class="fa fa-newspaper-o" aria-hidden="true">Newspaper</i></a></li>
+                        <li><a href="Podcasts.html" target="_blank"><i class="fa fa-podcast" aria-hidden="true">Podcast</i></a></li>
+                        
+                    </ul>
+                </li>
+                
+                <li><a href="FamousAuthour.html" target="_blank"><i class="fa fa-users" aria-hidden="true">Famous Authors</i></a></li>			
+                <li><a href="AboutUs.html" class="About"><i class="fa fa-info-circle" aria-hidden="true">About Us</i></a></li>
+                <li><a href="ContactUs.html" class="Contact"><i class="fa fa-id-card" aria-hidden="true">Contact Us</i></a></li>
+				<li><a href="FAQ.html" target="_blank"><i class="fa fa-question-circle" aria-hidden="true">FAQ</i></a></li>
+				
+            </ul>
+            <ul class="nav navbar-nav navbar-right">			
+                <li>
+                    <a href="Login.html" target="_blank"><i class="fa fa-sign-in" aria-hidden="true">Login</i></a>
+                </li>
+                <li>
+                    <a href="Signup.html" target="_blank"><i class="fa fa-sign-out" aria-hidden="true">Sign up</i></a>
+                </li>
+            </ul>
+		</div>
+		
+    </nav>
+
+  
+<!-- Introduction -->
+<div class="modal fade text-center py-5" style="top:30px" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<img src="Images/FinalLogo1.png" class="modal-img">
+				<h3 class="pt-5 mb-0 text-secondary"><b>WELCOME TO SMAP DIGITAL LIBRARY</b></h3>
+				<h3 class="pt-5 mb-0 text-secondary"><b>እንቃዕ ብድሓን መጻኩም ናብ SMAP DIGITAL LIBRARY</b></h3>
+				<p class="pb-3 text-muted"><small>Hope that you enjoy it well!</small></p>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid bg-dark">
+  
+	<div class="jumbotron-background">
+	  <img src="Images/guillaume-henrotte-dMBJ_zVluy0-unsplash.jpg">
+	</div>
+  
+	<div class="container text-white">
+  
+	  <h1 class="display-4">SMAP DIGITAL LIBRARY</h1>
+	  <p class="lead">"A Library is not a luxury but one of the necessities of life."</p>
+	  <hr class="my-4">
+	  <p>A Library is a place that is a repository of information and gives every citizen equal access to it. That includes health information and Mental health Information.</p>      
+	</div>
+	
+</div>
+
+<!-- RESOURCES -->
+<div class="main">
+
+	<h1>SMAP DIGITAL LIBRARY</h1>
+	
+	<hr>
+	
+	  
+	
+	<h2>LIBRARY RESOURCES</h2>	
+	<div class="wrapper">
+		<div class="switcher">
+		  <div class="buttonContainer">
+			<button class=" button theme1">🌞</button>
+			<button class="button theme2">🌙</button>
+			
+		  </div>
+		</div>
+	  </div>
+	
+	<div id="myBtnContainer">
+	  <button class="LibraryResources active" onclick="filterSelection('all')"> Show all</button>
+	  <button class="LibraryResources" onclick="filterSelection('Magazine')"> Magazine</button>
+	  <button class="LibraryResources" onclick="filterSelection('Books')"> Books</button>
+	  <button class="LibraryResources" onclick="filterSelection('Newspaper')"> Newspaper</button>
+	</div>
+	
+	<!-- Portfolio Gallery Grid -->
+	<div class="row">
+	  <div class="column Magazine">
+		<div class="content">
+			<a href="https://www.arabianbusiness.com" target="_blank">
+		  <img src="Images/MagzineImage/220px-Arabian_Business_magazine_May_30_2010_cover_200x292.jpg" alt="Arabian Business Magazine" style="width:100%">
+		</a>
+		  <h4>Arabian Business Magazine</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Magazine">
+		<div class="content">
+			<a href="https://www.goodhousekeeping.com/" target="_blank">
+		<img src="Images/MagzineImage/GoodHousekeeping_200x292.jpg" alt="Good Housekeeping" style="width:100%">
+	</a>
+		  <h4>Good Housekeeping</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Magazine">
+		<div class="content">
+			<a href="http://www.arabcomicsexhibit.org/" target="_blank">
+		<img src="Images/MagzineImage/liilas_ArabiComicBooks_200x292.jpg" alt="ARAB COMICS Magazine" style="width:100%">
+	</a>
+		  <h4>ARAB COMICS Magazine</h4>
+		  
+		</div>
+	  </div>
+	  <!-- Magazine -->
+	  <div class="column Magazine">
+		<div class="content">
+			<a href="https://www.aviamost.ae/en/mbrsc-launches-majarat-magazine-order-spread-knowledge-space-science" target="_blank">
+		<img src="Images/MagzineImage/MBRSCmagazine_200x292.jpg" alt="MBRSCS Magazine" style="width:100%">
+	</a>
+		  <h4>MBRSCS Magazine</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Magazine">
+		<div class="content">
+			<a href="https://www.radiotimes.com/tag/radio-times-magazine/" target="_blank">
+		<img src="Images/MagzineImage/RadioTimes-cvr_200x292.jpg" alt="Radio Times" style="width:100%">
+	</a>
+		  <h4>Radio Times</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Magazine">
+		<div class="content">
+			<a href="https://www.thetimes.co.uk/" target="_blank">
+		<img src="Images/MagzineImage/TIME_200x292.jpg" alt="Times" style="width:100%">
+	</a>
+		  <h4>Times</h4>
+		  
+		</div>
+	  </div>
+
+	  <!-- Books -->
+	  <div class="column Books">
+		<div class="content">
+			<a href="DataAnalytics.html" target="_blank">
+		  <img src="Images/BooksImages/DataAnalytics_200x292.jpg" alt="Data Analytics" style="width:100%">
+		</a>
+		  <h4>Data Analytics</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Books">
+		<div class="content">
+			<a href="LearnJava.html" target="_blank">
+		<img src="Images/BooksImages/download_4_200x292.png" alt="Learn Java the easy way" style="width:100%">
+	</a>
+		  <h4>Learn Java the easy way</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Books">
+		<div class="content">
+			<a href="GameOfThrones.html" target="_blank">
+		<img src="Images/BooksImages/Game-of-Thrones_200x292.jpg" alt="Game of Thrones" style="width:100%">
+	</a>
+		  <h4>Game of Thrones</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Books">
+		<div class="content">
+			<a href="HarryPotter.html" target="_blank">
+		  <img src="Images/BooksImages/7-new-must-see-_harry-potter_-.jpg" alt="Harry Potter" style="width:100%">
+		</a>
+		  <h4>Harry Potter</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Books">
+		<div class="content">
+			<a href="Dragon'sBreath.html" target="_blank">
+		<img src="Images/BooksImages/ChildrenBooks_200x292.jpg" alt="Dragon's Breath" style="width:100%">
+	</a>
+		  <h4>Dragon's Breath</h4>
+		 
+		</div>
+	  </div>
+	  <div class="column Books">
+		<div class="content">
+			<a href="" target="_blank">
+		<img src="Images/BooksImages/Limitless_-_Jim_Kwik_200x292.png" alt="Limitless" style="width:100%">
+	</a>
+		  <h4>Limitless</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Books">
+		<div class="content">
+			<a href="Python.html" target="_blank">
+		<img src="Images/BooksImages/Python_200x292.jpg" alt="Python" style="width:100%">
+	</a>
+		  <h4>Python</h4>
+		 
+		</div>
+	  </div>
+	  <div class="column Books">
+		<div class="content">
+			<a href="RichDad.html" target="_blank">
+		<img src="Images/BooksImages/The_Best-Selling_Audiobooks_Right_Now_200x292.jpg" alt="Rich dad poor dad" style="width:100%">
+	</a>
+		  <h4>Rich dad poor dad</h4>
+		 
+		</div>
+	  </div>
+	  <!-- Newspaper -->
+	
+	  <div class="column Newspaper">
+		<div class="content">
+			<a href="https://www.alkhaleej.ae/" target="_blank">
+		  <img src="Images/NewspaperImages/AL-Khaleej.jpg" alt="AL-Khaleej" style="width:100%">
+		</a>
+		  <h4>AL-Khaleej</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Newspaper">
+		<div class="content">
+			<a href="http://www.thebostonpost.com/" target="_blank">
+		<img src="Images/NewspaperImages/bostonpost1-780x439.jpg" alt="The Boston Newspaper" style="width:100%">
+	</a>
+		  <h4>The Boston Newspaper</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Newspaper">
+		<div class="content">
+			<a href="https://shabait.com/category/newspapers/" target="_blank">
+		<img src="Images/NewspaperImages/EritreaNewspaper.jpg" alt="Eritrea Newspaper" style="width:100%">
+		</a>
+		  <h4>Eritrea Newspaper</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Newspaper">
+		<div class="content">
+			<a href="https://gulfnews.com/" target="_blank">
+		<img src="Images/NewspaperImages/GulfNewspaper.jpg" alt="Gulf Newspaper" style="width:100%">
+			</a>
+		  <h4>Gulf Newspaper</h4>
+		  
+		</div>
+	  </div>
+	  <div class="column Newspaper">
+		<div class="content">
+			<a href="https://www.khaleejtimes.com/" target="_blank">
+		<img src="Images/NewspaperImages/Khaleej_Times_.jpg" alt="Khaleej Times" style="width:100%">
+			</a>
+		  <h4>Khaleej Times</h4>
+		  
+		</div>
+		
+	  </div>
+	<!-- END GRID -->
+	</div>
+	
+	<!-- END MAIN -->
+	</div>
+
+
+
+<!-- Quotes from famous Authors -->
+<div class="container">
+	<div class="rows">
+		<div class="col-sm-12">
+			<h2> The Best Quotes <b> From Best Authors </b> About Library & Education</h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="rows">
+							<div class="col-sm-6">
+								<div class="testimonial-wrapper">
+									<div class="testimonial">Your education begins when you leave school. Not when you're in school.</div>
+									<div class="media">
+										<div class="media-left d-flex mr-3">
+											<img src="Images/AuthorImage/RobertK.jpeg" alt="">										
+										</div>
+										<div class="media-body">
+											<div class="overview">
+												<div class="name"><b>Robert Kiyosaki</b></div>
+												<div class="details">Founder of Rich Global LLC/ The Rich Dad Company</div>
+												<div class="star-rating">
+													<ul class="list-inline">
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+													</ul>
+												</div>
+											</div>										
+										</div>
+									</div>
+								</div>								
+							</div>
+							<div class="col-sm-6">
+								<div class="testimonial-wrapper">
+									<div class="testimonial">Knowing I loved my books, he furnished me from mine own library with volumes that I prize above my dukedom.</div>
+									<div class="media">
+										<div class="media-left d-flex mr-3">
+											<img src="Images/AuthorImage/Shakespeare.jpg" alt="">										
+										</div>
+										<div class="media-body">
+											<div class="overview">
+												<div class="name"><b>William Shakespeare</b></div>
+												<div class="details">English playwright/poet/Actor</div>
+												<div class="star-rating">
+													<ul class="list-inline">
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>			
+					</div>
+					<div class="item">
+						<div class="rows">
+							<div class="col-sm-6">
+								<div class="testimonial-wrapper">
+									<div class="testimonial">Reading is a way for me to expand my mind, open my eyes, all fill up my heart.</div>
+									<div class="media">
+										<div class="media-left d-flex mr-3">
+											<img src="Images/AuthorImage/Oprah Winfrey.jpg" alt="">										
+										</div>
+										<div class="media-body">
+											<div class="overview">
+												<div class="name"><b>Oprah Winfrey</b></div>
+												<div class="details">Philanthropist/Author/Actress / DevCorp</div>											
+												<div class="star-rating">
+													<ul class="list-inline">
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+							<div class="col-sm-6">
+								<div class="testimonial-wrapper">
+									<div class="testimonial">I'm not special. I didn't naturally have these superpowers. They were learned. And if i can learn them, anyone can learn them regardless of age, background or education.</div>
+									<div class="media">
+										<div class="media-left d-flex mr-3">
+											<img src="Images/AuthorImage/Jim.jpg" alt="">										
+										</div>
+										<div class="media-body">
+											<div class="overview">
+												<div class="name"><b>Jim Kwik</b></div>
+												<div class="details">Founder and CEO of Kwik Learning</div>
+												<div class="star-rating">
+													<ul class="list-inline">
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+													</ul>
+												</div>
+											</div>										
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>			
+					</div>
+					<div class="item">
+						<div class="rows">
+							<div class="col-sm-6">
+								<div class="testimonial-wrapper">
+									<div class="testimonial">A country's greatest investment is building generations of educated and knowledgeable youth.</div>
+									<div class="media">
+										<div class="media-left d-flex mr-3">
+											<img src="Images/AuthorImage/Shaikh-Zayed-Bin-Sultan-Al-Nahyan_16b22c0496b_medium.jpg" alt="">										
+										</div>
+										<div class="media-body">
+											<div class="overview">
+												<div class="name"><b>Shaikh Zayed Bin Sultan Al Nahyan</b></div>
+												<div class="details">Founder of UAE</div>
+												<div class="star-rating">
+													<ul class="list-inline">
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													</ul>
+												</div>
+											</div>										
+										</div>
+									</div>
+								</div>								
+							</div>
+							<div class="col-sm-6">
+								<div class="testimonial-wrapper">
+									<div class="testimonial">I don't believe in the kind od magic in my books. But I do believe something very magical can happen when you read a good book.</div>
+									<div class="media">
+										<div class="media-left d-flex mr-3">
+											<img src="Images/AuthorImage/JK_Rowling_1591597583296.webp" alt="">										
+										</div>
+										<div class="media-body">
+											<div class="overview">
+												<div class="name"><b>J.K. Rowling</b></div>
+												<div class="details">British writer/philanthropist</div>
+												<div class="star-rating">
+													<ul class="list-inline">
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star"></i></li>
+														<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+													</ul>
+												</div>
+											</div>										
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>			
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+	var _smartsupp = _smartsupp || {};
+	_smartsupp.key = '39e099336f85c5adceb676b906c5d85cc39b8063';
+	window.smartsupp||(function(d) {
+	  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	  c.type='text/javascript';c.charset='utf-8';c.async=true;
+	  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+	})(document);
+	</script>
+
+	 <!-- Script for the toggle -->
+	 <script>
+		var body = document.querySelector("body"), // Creates a variable called body, so we can reference it more easily below.
+		goLight = function() { // Creates a function called goLight that adds the 'dark' class to the body
+		  body.className = "";
+		},
+		goDark = function() { // Creates a function called goDark that removes the 'dark' class from the body
+		  body.className = "";
+		  body.classList.add("dark");
+		},
+		goTeal = function() {
+			body.className = "";
+			body.classList.add("teal");
+		  }
+	  
+	  document.querySelector(".theme1").addEventListener("click", goLight, false); // Tells the first button to run the goLight function when clicked
+	  
+	  document.querySelector(".theme2").addEventListener("click", goDark, false); // Tells the second button to run the goDark function when clicked
+	  
+	  
+	  // Now let's do the bonus round!
+	  var switchee = document.querySelector(".bonus__header"),
+		switchButton = document.querySelector(".submit"),
+		switcher = document.querySelector(".newText"),
+		replaceText = function() {
+		  var switcherText = document.querySelector(".newText").value;
+		  switchee.innerHTML = switcherText;
+		};
+	  
+	  switchButton.addEventListener("click", replaceText, false); // Switch the text on click of the button
+	  
+	  var switchImmediately = function() {
+		switcher.addEventListener("keyup", replaceText, false); // Switch text every time you type a key in the input
+	  };
+	  
+	  switchImmediately(); // Invoke the function
+	  </script>
+
+<!-- Footer -->
+
+<footer class="mainfooter" role="contentinfo">
+	<div class="footer-middle">
+	<div class="container">
+	  <div class="rows">
+		<div class="col-md-3 col-sm-6">
+		  <!--Column1-->
+		  <div class="footer-pad">
+			<h1>SMAP DIGITAL LIBRARY</h1>
+		  </div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+		  <!--Column1-->
+		  <div class="footer-pad">
+			<h4>Library Resources</h4>
+			<ul class="list-unstyled">
+			  <li><a href="Books.html" target="_blank">Book</a></li>
+			  <li><a href="Megazine.html" target="_blank">Megazine</a></li>
+			  <li><a href="Newspaper.html" target="_blank">Newspaper</a></li>
+			  <li><a href="Podcasts.html" target="_blank">Podcast</a></li>
+			  
+			  
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+		  <!--Column1-->
+		  <div class="footer-pad">
+			<h4>Service </h4>
+			<ul class="list-unstyled">
+			  <li><a href="AboutUs.html" target="_blank">About Us</a></li>
+			  <li><a href="ContactUs.html" target="_blank">Contact Us</a></li>
+			  <li><a href="FAQ.html" target="_blank">FAQ</a></li>
+			</ul>
+		  </div>
+		</div>
+		  <div class="col-md-3">
+			  <h4>Follow Us</h4>
+			  <ul class="social-network social-circle">
+			   <li><a href="https://www.facebook.com/samuel.ezgihaysh.7/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+			   <li><a href="https://www.linkedin.com/in/samuel-ezgihaysh-71223317b/" class="icoLinkedin" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			   <li><a href="https://twitter.com/Samuel11480376" class="icoTwitter" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			   <li><a href="https://www.instagram.com/ezgihaysh/" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			   <li><a href="https://www.pinterest.com/ezgihaysh/_saved/" class="icoPinterest" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+				
+			  </ul>				
+		  </div>
+	  </div>
+	  
+	  <div class="rows">
+		  <div class="col-md-12 copy">
+			  <p class="text-center">&copy; Copyright 2020 - SMAP DIGITAL LIBRARY.  All rights reserved.</p>
+		  </div>
+	  </div>
+  
+  
+	</div>
+	</div>
+  </footer>
+	
+</body>
+</html> 
+
+

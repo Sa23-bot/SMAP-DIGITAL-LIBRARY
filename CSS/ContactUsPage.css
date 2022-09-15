@@ -1,0 +1,285 @@
+
+.form-inline {
+    display: inline-block;
+}
+.navbar {
+    font-size: 14px;
+    background: #fff;
+    /* margin: 0 auto;
+    margin-top: 8px; */
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 1px solid #d6d6d6;
+    box-shadow: 0 0 4px rgba(191, 184, 184, 0.1);	
+    border-radius: 10px;	
+}
+.navbar .navbar-brand {
+    color: #555;
+    padding-left: 0;
+    font-size: 20px;
+    padding-right: 50px;
+    text-transform: uppercase;
+}
+.navbar .navbar-brand b {
+    font-weight: bold;
+    color: #f04f01;
+}
+/* .navbar ul.nav li {
+    font-size: 96%;
+    font-weight: bold;		
+    text-transform: uppercase;
+} */
+.navbar ul.nav li.active a, .navbar ul.nav li.active a:hover, .navbar ul.nav li.active a:focus {
+    color: #f04f01 !important;
+    background: transparent !important;
+   
+}
+.navbar ul li i {
+    font-size: 18px;
+}
+.navbar .dropdown-menu i {
+    font-size: 16px;
+    min-width: 22px;
+}
+.navbar .dropdown.open > a {
+    background: none !important;
+}
+.navbar .dropdown-menu {
+    border-radius: 1px;
+    border-color: #e5e5e5;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu li a {
+    color: #777;
+    padding: 8px 20px;
+    line-height: normal;
+    font-size: 10px;
+}
+.navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
+    color: #333;
+    font-size: 20px;
+    
+}
+.navbar .navbar-form {
+    border: none;
+}
+.navbar-collapse ul li a:hover {
+     font-size: 15px;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+ .Contact{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+ }
+
+ /*  */
+
+ body {
+    color: #333;
+    background: #fafafa;
+    font-family: "Patua One", sans-serif;
+}
+.container{
+    box-shadow: 0px 0px 20px #61616165;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.contact-form {
+    padding: 50px;
+    margin: 30px 0;
+}
+.contact-form h1 {
+    color: #19bc9d;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+.contact-form .form-control, .contact-form .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.contact-form .form-control:focus {
+    border-color: #19bc9d;
+}
+.contact-form .btn-primary {
+    color: #fff;
+    min-width: 150px;
+    font-size: 16px;
+    background: #19bc9d;
+    border: none;
+}
+.contact-form .btn-primary:hover {
+    background: #15a487; 
+}
+.contact-form .btn i {
+    margin-right: 5px;
+}
+.contact-form label {
+    opacity: 0.7;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.hint-text {
+    font-size: 15px;
+    padding-bottom: 20px;
+    opacity: 0.6;
+}
+#status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+  }
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+  }
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  
+/* Footer */
+footer {
+    background: #16222A;
+    background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+    background: linear-gradient(59deg, #3A6073, #16222A);
+    color: white;
+    margin-top:100px;
+    border: none;
+  }
+  
+   @media (max-width:768px){
+      .footer-middle .container .footer-pad ul{
+          height: 300px;   
+      }
+      .footer-middle .container .footer-pad h4{
+          font-size: 23px;   
+      }
+  }
+  @media (max-width:400px){
+    .footer-middle .container .footer-pad ul{
+          height: 200px;   
+      }
+      .footer-middle .container .footer-pad h4{
+          font-size: 17px;   
+      }
+      .navbar-brand{
+          font-size: 12px;   
+      }
+  } 
+  
+  footer a {
+    color: #fff;
+    font-size: 14px;
+    transition-duration: 0.2s;
+  }
+  
+  footer a:hover {
+    color: #FA944B;
+    text-decoration: none;
+  }
+  
+  .copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+  }
+  
+  .footer-middle {
+    padding-top: 2em;
+    color: white;
+  }
+  
+  
+  
+  /* footer social icons */
+  
+  ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+  }
+  
+  ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+  }
+  
+  .social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+  }
+  
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i {
+    color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: #44BCDD;
+  }
+  
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  
+  .social-network a {
+    background-color: #F9F9F9;
+  }

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML and CSS: Design and Build Websites</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="CSS/search.css">
+
+
+<script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+</head> 
+<body translate="no">
+    <!-- header -->
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="Library.html" target="_blank">SMAP<b>DIGITAL Library</b></a>  		
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="navbar-toggler-icon"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="Library.html" target="_blank"><i class="fa fa-home" aria-hidden="true"></i>Home</i></a></li>
+                
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" class="Library active" href="#"> <i class="fa fa-list" aria-hidden="true">Library Resources</i><b class="caret"></b></a>
+                    <ul class="dropdown-menu">					
+                        <li><a href="Books.html" target="_blank"><i class="fa fa-book" aria-hidden="true">Books</i></a></li>
+                        <li><a href="Megazine.html" target="_blank"><i class="fa fa-medium" aria-hidden="true">Megazine</i></a></li>
+                        <li><a href="Newspaper.html" target="_blank"> <i class="fa fa-newspaper-o" aria-hidden="true">Newspaper</i></a></li>
+                        <li><a href="Podcasts.html" target="_blank"><i class="fa fa-podcast" aria-hidden="true">Podcast</i></a></li>
+                        
+                    </ul>
+                </li>
+                
+                <li><a href="FamousAuthour.html" target="_blank"><i class="fa fa-users" aria-hidden="true">Famous Authors</i></a></li>			
+                <li><a href="AboutUs.html" class="About"><i class="fa fa-info-circle" aria-hidden="true">About Us</i></a></li>
+                <li><a href="ContactUs.html" class="Contact"><i class="fa fa-id-card" aria-hidden="true">Contact Us</i></a></li>
+                <li><a href="FAQ.html" target="_blank"><i class="fa fa-question-circle" aria-hidden="true">FAQ</i></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">			
+                <li>
+                    <a href="Login.html" target="_blank"><i class="fa fa-sign-in" aria-hidden="true">Login</i></a>
+                </li>
+                <li>
+                    <a href="Signup.html" target="_blank"><i class="fa fa-sign-out" aria-hidden="true">Sign up</i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+<!--  -->
+
+  <!-- svg elements defined for the project -->
+  <svg hidden style="opacity: 0; width: 0; height: 0; position: absolute; top: 100%; left: 100%;">
+    <defs>
+        <!-- mask to cut out sections of the letter b -->
+        <mask id="mask-b">
+            <rect
+                x="0"
+                y="0"
+                width="52"
+                height="150"
+                fill="#fff">
+            </rect>
+            <path
+                d="M 14 14 h 20 a 3 3 0 0 1 3 3 v 6 a 3 3 0 0 1 -3 3 h -20 z"
+                fill="#000">
+            </path>
+            <path
+                d="M 14 44 h 20 a 3 3 0 0 1 3 3 v 6 a 3 3 0 0 1 -3 3 h -20 z"
+                fill="#000">
+            </path>
+        </mask>
+        <!-- mask to cut out the central section of the letter(s) o -->
+        <mask id="mask-o">
+            <rect
+                x="0"
+                y="0"
+                width="50"
+                height="150"
+                fill="#fff">
+            </rect>
+            <!-- cut-out section replicating the letter o, but scaled from the center -->
+            <g
+                transform="translate(25 40) scale(0.5 0.6)">
+                <g transform="translate(-25 -40)">
+                    <path
+                        fill="#000"
+                        d="M 0 0 a 100 100 0 0 1 50 15 v 70 a 100 100 0 0 0 -50 -15 v -70">
+                    </path>
+                </g>
+            </g>
+        </mask>
+        <!-- letter o
+            including the mask and additional paths for the leaves above the letter
+            ! this means the letters b and k need to be translated vertically to be aligned with the letter(s) o
+        -->
+        <symbol id="letter-o">
+            <path
+                transform="translate(0 21)"
+                mask="url(#mask-o)"
+                d="M 0 0 a 100 100 0 0 1 50 15 v 70 a 100 100 0 0 0 -50 -15 v -70">
+            </path>
+            <path
+                d="M 50 31 a 100 100 0 0 0 -45 -20 v 5 a 100 100 0 0 1 45 15">
+            </path>
+            <path
+                d="M 50 26 a 100 100 0 0 0 -22 -26 v 10 a 100 100 0 0 1 22 16">
+            </path>
+        </symbol>
+        <!-- gradient overlaid on the books to give them a semitransparent shadow
+        ! each book is mean to be 25 wide, hence the x2 value
+        -->
+        <linearGradient id="gradient-book" gradientUnits="userSpaceOnUse" y1="0" y2="0" x1="0" x2="25">
+            <stop stop-color="#FF184A" offset="0"></stop>
+            <stop stop-color="#311839" offset="1"></stop>
+        </linearGradient>
+        <!-- symbols describing the books included later in the project
+            three variants with different patterns -->
+        <symbol id="book-1">
+            <g>
+                <rect
+                    fill="#FF184A"
+                    x="5"
+                    y="0"
+                    width="15"
+                    height="125"
+                    rx="2">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="5"
+                    y="5"
+                    width="15"
+                    height="10">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="5"
+                    y="110"
+                    width="15"
+                    height="10">
+                </rect>
+                <rect
+                    fill="url(#gradient-book)"
+                    x="5"
+                    y="0"
+                    width="15"
+                    height="125"
+                    rx="2"
+                    opacity="0.6">
+                </rect>
+            </g>
+        </symbol>
+        <symbol id="book-2">
+            <g>
+                <rect
+                    fill="#FF184A"
+                    x="0"
+                    y="0"
+                    width="25"
+                    height="125"
+                    rx="3.5">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="0"
+                    y="10"
+                    width="25"
+                    height="2">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="0"
+                    y="17"
+                    width="25"
+                    height="20">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="0"
+                    y="42"
+                    width="25"
+                    height="2">
+                </rect>
+                <rect
+                    fill="url(#gradient-book)"
+                    x="0"
+                    y="0"
+                    width="25"
+                    height="125"
+                    rx="3.5"
+                    opacity="0.6">
+                </rect>
+            </g>
+        </symbol>
+        <symbol id="book-3">
+            <g>
+                <rect
+                    fill="#FF184A"
+                    x="0.5"
+                    y="25"
+                    width="24"
+                    height="100"
+                    rx="5">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="5.5"
+                    y="50"
+                    width="2"
+                    height="35">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="11.5"
+                    y="45"
+                    width="2"
+                    height="45">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="17.5"
+                    y="50"
+                    width="2"
+                    height="35">
+                </rect>
+                <rect
+                    fill="url(#gradient-book)"
+                    x="0.5"
+                    y="25"
+                    width="24"
+                    height="100"
+                    rx="5"
+                    opacity="0.6">
+                </rect>
+            </g>
+        </symbol>
+        <symbol id="book-4">
+            <g>
+                <rect
+                    fill="#FF184A"
+                    x="6"
+                    y="0"
+                    width="13"
+                    height="125"
+                    rx="2">
+                </rect>
+                <rect
+                    fill="#932243"
+                    x="11.5"
+                    y="12.5"
+                    width="2"
+                    height="100"
+                    rx="2">
+                </rect>
+                <rect
+                    fill="url(#gradient-book)"
+                    x="6"
+                    y="0"
+                    width="13"
+                    height="125"
+                    rx="2"
+                    opacity="0.6">
+                </rect>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+
+
+<!-- html structure
+.app, wrapping container
+    header
+        svg
+    form
+        label, input and submit button
+    section
+        one article for each book, nesting an svg element and a div describing the book
+        ! elements added through the script following the fetch request
+-->
+<div class="app">
+    <header>
+        <svg viewBox="0 0 240 106" width="240" height="106">
+            <g fill="currentColor">
+                <!-- b -->
+                <g transform="translate(0 21)">
+                    <path
+                        mask="url(#mask-b)"
+                        d="M 0 0 h 40 a 12 12 0 0 1 12 12 v 18 a 5 5 0 0 1 -5 5 a 5 5 0 0 1 5 5 v 18 a 12 12 0 0 1 -12 12 h -40">
+                    </path>
+                </g>
+                <!-- o -->
+                <g transform="translate(64 0)">
+                    <use href="#letter-o"></use>
+                </g>
+                <!-- o scaled with a negative x value to create a mirrored version -->
+                <g transform="translate(69 0)">
+                    <!-- scaled from the right edge of the letter -->
+                    <g transform="translate(50 0) scale(-1 1)">
+                        <g transform="translate(-50 0)">
+                            <use href="#letter-o"></use>
+                        </g>
+                    </g>
+                </g>
+                <!-- k -->
+                <g transform="translate(181 21)">
+                    <path
+                        d="M 0 0 v 70 h 15 v -30 l 24 30 h 20 l -28 -35 l 28 -35 h -20 l -24 30 v -30 z">
+                    </path>
+                </g>
+            </g>
+        </svg>
+    </header>
+
+    <form>
+        <label for="title">Search by title To Know who is the author of the Book</label>
+        <input type="text" name="title" id="title">
+
+        <button aria-describedby="search-book">
+            <svg viewBox="0 0 100 100" width="30" height="30">
+                <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="5">
+                    <circle
+                        cx="42"
+                        cy="42"
+                        r="25">
+                    </circle>
+                    <path
+                        stroke-linecap="round"
+                        d="M 67 67 l 15 15">
+                    </path>
+                </g>
+            </svg>
+            <span hidden id="search-book">Search for book</span>
+        </button>
+    </form>
+
+    <!-- article structure
+        svg, drawing the side of the book
+        div, describing the book's information
+        -->
+    <section>
+        <!-- <article>
+            <svg viewBox="0 0 25 125" width="25" height="125">
+                <use href="#book-1"></use>
+            </svg>
+            <div>
+                <h1>Book name</h1>
+                <h2>Author</h2>
+                ...
+            </div>
+        </article> -->
+    </section>
+</div>
+
+
+
+    <script src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+
+      <script id="rendered-js" >
+// global variables
+
+// endpoint allowing to build the URL
+
+const endpoint = 'https://openlibrary.org/search.json';
+// limit capping the number of results returned from the call to the API
+const limit = 10;
+
+// form handling the submit event
+const form = document.querySelector('form');
+// section detailing the books
+const section = document.querySelector('section');
+
+// function to show the books fetched through the API
+const showBooks = books => {
+  // for each book retrieve the name, author and year of first publication
+  // describe the details in a wrapping container and following an SVG drawing the book from one of the defined graphics
+  section.innerHTML = books.
+  map(({ title, author_name: author, first_publish_year: year }, index) => `
+    <article style="animation-delay: ${0.1 * index}s;">
+      <svg viewBox="0 0 25 125" width="25" height="125">
+          <use href="#book-${Math.ceil(Math.random() * 4)}"></use>
+      </svg>
+      <div>
+          <h1>${title.length > 45 ? `${title.substring(0, 45)}...` : title}</h1>
+          <h2>${author || 'Unknown'}</h2>
+          <p>${year || 'Unknown'}</p>
+      </div>
+    </article>
+    `).
+  join('');
+};
+
+// function to show the lack of books
+const showMissingBooks = () => {
+  form.reset();
+  section.innerHTML = `
+  <article>
+  <h3>Sorry, no match</h3>
+  </article>
+  `;
+};
+
+// function to show the error message
+const showError = error => {
+  form.reset();
+  section.innerHTML = `
+    <article>
+      <h3>${error}</h3>
+    </article>
+  `;
+};
+
+// on submit prevent the default behavior and proceed fetching the necessary information
+const handleSubmit = e => {
+  e.preventDefault();
+  const title = form.querySelector('input').value;
+  if (title) {
+    // remove existing content from the section
+    section.innerHTML = '<article><h3>Searching...</h3></article>';
+    const url = `${endpoint}?title=${title}&limit=${limit}`;
+    /* following the fetch request handle the following cases
+                                                             - the request returns an array of results, call a function to add them through article and svg elements
+                                                             - the request returns an empty array, call a function to detail as such
+                                                             - the request fails, show an error message
+                                                             */
+    fetch(url).
+    then(response => response.json()).
+    then(json => {
+      const { docs: books } = json;
+      if (books.length > 0) {
+        showBooks(books);
+      } else {
+        showMissingBooks();
+      }
+    }).
+    catch(err => showError(err));
+  }
+};
+form.addEventListener('submit', handleSubmit);
+//# sourceURL=pen.js
+    </script> 
+	
+</body>
+</html> 
+
+

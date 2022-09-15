@@ -1,0 +1,281 @@
+/* Styling the navbar */
+.form-inline {
+  display: inline-block;
+}
+.navbar {
+  font-size: 14px;
+  background: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px rgba(191, 184, 184, 0.1);	
+  border-radius: 10px;	
+}
+.navbar .navbar-brand {
+  color: #555;
+  padding-left: 0;
+  font-size: 20px;
+  padding-right: 50px;
+  text-transform: uppercase;
+}
+.navbar .navbar-brand b {
+  font-weight: bold;
+  color: #f04f01;
+} 
+/* .navbar ul.nav li {
+  font-size: 96%;
+  font-weight: bold;		
+  text-transform: uppercase;
+} */
+.navbar ul.nav li.active a, .navbar ul.nav li.active a:hover, .navbar ul.nav li.active a:focus {
+  color: #f04f01 !important;
+  background: transparent !important;
+ 
+}
+.navbar ul li i {
+  font-size: 20px;
+}
+.navbar .dropdown-menu i {
+  font-size: 16px;
+  min-width: 22px;
+}
+.navbar .dropdown.open > a {
+  background: none !important;
+}
+.navbar .dropdown-menu {
+  border-radius: 1px;
+  border-color: #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu li a {
+  color: #777;
+  padding: 8px 20px;
+  line-height: normal;
+  font-size: 10px;
+}
+.navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
+  color: #333;
+  font-size: 20px;
+  
+}
+.navbar .navbar-form {
+  border: none;
+}
+.navbar-collapse ul li a:hover {
+   font-size: 15px;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+/* Toggle */
+body.dark {
+  color: #ccc;
+  background-color: #222;
+}
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.switcher {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: #4b7094;
+  color: white;
+  border: 0;
+  padding: 1em;
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1em;
+  height: 3em;
+  line-height: 1em;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+.button.theme1 {
+  background-color: #ddd;
+  color: #4b7094;
+}
+.button.theme1:hover {
+  background-color: #eee;
+  color: #666;
+}
+/* Introduction */
+
+    i {
+    font-size: 214%;
+    }
+  img {
+    width: 99.5%;
+    }
+    .division0 {
+      background: #d9d9d9; 
+      margin: 5%; 
+      padding: 2%;
+      text-align: center;
+    }
+    .division1 {
+      background: white;
+      margin: 2%;
+    }
+    .division2 {
+                text-align: left; 
+                margin-top: 0%;
+                margin-bottom: 0%;
+                margin-left: 21%;
+                margin-right: 21%;
+    }
+
+/* Footer */
+footer {
+  background: #16222A;
+    background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+    background: linear-gradient(59deg, #3A6073, #16222A);
+  color: white;
+  margin-top:100px;
+  border: none;
+}
+ @media (max-width:768px){
+    .footer-middle .container .footer-pad ul{
+        height: 300px;   
+    }
+    .footer-middle .container .footer-pad h4{
+        font-size: 23px;   
+    }
+}
+@media (max-width:400px){
+  .footer-middle .container .footer-pad ul{
+        height: 200px;   
+    }
+    .footer-middle .container .footer-pad h4{
+        font-size: 17px;   
+    }
+    .navbar-brand{
+        font-size: 12px;   
+    }
+} 
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+footer a:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: white;
+}
+
+
+
+/* footer social icons */
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+.social-network a.icoPinterest:hover {
+  background-color: #cb2027;
+}
+.social-network a.icoTwitter:hover {
+  background-color: #55ACEE;
+}
+.social-network a.icoInstagram:hover {
+  background-color: #125688;
+}
+
+.social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i,
+  .social-network a.icoPinterest:hover i,
+  .social-network a.icoTwitter:hover i,
+  .social-network a.icoInstagram:hover i {
+    color: #fff;
+  }
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
